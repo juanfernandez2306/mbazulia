@@ -89,7 +89,7 @@ main{
 main{
     display: grid;
     grid-auto-columns: 100%;
-    grid-template-rows: auto repeat(2, 1fr);
+    grid-template-rows: calc(95vh - var(--header-height) - var(--height-banner-mpps)) repeat(2, 1fr);
     grid-template-areas:
     "slider"
     "aside1"
@@ -108,13 +108,22 @@ main .aside2{
 
 /*slider*/
 
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    color: var(--color-thirth);
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background-color: var(--color-thirth);
+}
+
 .swiper{
     grid-area: slider;
     background-color: var(--color-thirth);
     width: 100%;
-    height: auto;
 }
 
+/*
 .swiper-slide{
     display: flex;
 }
@@ -126,9 +135,36 @@ main .aside2{
     object-fit: cover;
 }
 
+.swiper-slide{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+*/
 
+#slider1{
+    background: url('img/slider/img1.jpg');
+}
 
+#slider2{
+    background: url('img/slider/img2.jpg');
+}
 
+#slider3{
+    background: url('img/slider/img3.jpg');
+}
+
+#slider1,
+#slider2,
+#slider3{
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 /*Menu hamburge*/
 .menu-btn{
