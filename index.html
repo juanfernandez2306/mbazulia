@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet"href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/main.js"></script>
 </head>
@@ -14,21 +18,43 @@
             <div class="mppsMobile">
                 <img src="assets/img/logos/mpps_horizontal.png" width="400">
             </div>
-            <div class="headerMobile">
+            <div class="header">
                 <aside>
-                    <img src="assets/img/logos/fmba.png" width="100">
-                    <img src="assets/img/logos/crzulia.png" width="110">
+                    <img class="img-mobile" src="assets/img/logos/fmba.png" width="100">
+                    <img class="img-mobile" src="assets/img/logos/crzulia.png" width="110">
                 </aside>
                 <aside class="menu-btn">
                     <a href="#" class="menu-btn-burger"></a>
                 </aside>
             </div>
-            <div class="header"></div>
         </header>
         <main>
-            <aside></aside>
-            <section></section>
-            <aside></aside>
+            <aside class="aside1"></aside>
+            <section class="swiper">
+
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="assets/img/slider/img1.jpg">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/slider/img2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/img/slider/img3.jpg" alt="">
+                    </div>
+                    
+                </div>
+                
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                
+            </section>
+            <aside class="aside2"></aside>
         </main>
         <footer></footer>
     </div>
