@@ -166,6 +166,20 @@ main .aside2{
     background-attachment: fixed;
 }
 
+.swiper-slide{
+    position: relative;
+}
+
+.swiper-slide > p{
+    color: var(--color-thirth);
+    font-size: 1.5rem;
+    background-color: rgba(0,0,0,.5);
+    padding: .8rem;
+    text-align: justify;
+    position: absolute;
+    bottom: 5%;
+}
+
 /*Menu hamburge*/
 .menu-btn{
     position: relative;
