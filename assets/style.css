@@ -167,7 +167,7 @@ main .aside2{
     gap: .5rem;
     align-items: center;
     justify-content: center;
-    padding: .5rem;
+    padding: 1rem;
 }
 
 .form-consult-dni input,
@@ -176,6 +176,8 @@ main .aside2{
     padding: .5rem;
     font-size: 1rem;
     border-radius: .5rem;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
 }
 
 .form-consult-dni svg{
@@ -192,6 +194,19 @@ main .aside2{
 
 .form-consult-dni .title h2{
     font-size: 1.1rem;
+}
+
+.form-consult-dni figure{
+    margin: 0;
+}
+
+.form-consult-dni input[type="submit"]{
+    background-color: var(--color-secondary);
+    color: var(--color-thirth);
+}
+
+.form-consult-dni input[type="submit"]:hover{
+    opacity: .7;
 }
 
 /*Menu hamburge*/
