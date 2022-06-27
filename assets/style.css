@@ -1,0 +1,70 @@
+:root{
+    --color-firts: #ff0000;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #eee;
+    margin: 0 auto;
+}
+
+header{
+    grid-area: header;
+    background-color: var(--color-firts);
+}
+
+.geolocation{
+    grid-area: geolocation;
+    background-color: blue;
+}
+
+main{
+    grid-area: main;
+    background-color: gold;
+}
+
+.system{
+    grid-area: system;
+    background-color: green;
+}
+
+.contact{
+    grid-area: contact;
+    background-color: chartreuse;
+}
+
+footer{
+    grid-area: footer;
+    background-color: grey;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px calc(100vh - 100px) repeat(2, 50vh) repeat(2, 200px);
+    grid-template-areas:
+    "header"
+    "main"
+    "system"
+    "geolocation"
+    "contact"
+    "footer";
+}
+
+@media screen and (min-width: 900px){
+    .grid-container{
+        grid-template-columns: 300px auto 300px;
+        grid-template-rows: 100px calc(100vh - 200px) 100px 100px;
+        grid-template-areas:
+        "header header header"
+        "geolocation main system"
+        "geolocation contact system"
+        "footer footer footer";
+    }
+}
