@@ -14,9 +14,31 @@ body{
     margin: 0 auto;
 }
 
+.img-mpps-container{
+    background-color: #fff;
+    padding: 0 1rem;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: img-mpps-container;
+}
+
 header{
     grid-area: header;
     background-color: var(--color-firts);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+header figure{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0;
 }
 
 .geolocation{
@@ -47,8 +69,9 @@ footer{
 .grid-container{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 100px calc(100vh - 100px) repeat(2, 50vh) repeat(2, 200px);
+    grid-template-rows: 50px 70px calc(100vh - 120px) repeat(2, 50vh) repeat(2, 200px);
     grid-template-areas:
+    "img-mpps-container"
     "header"
     "main"
     "system"
@@ -57,14 +80,78 @@ footer{
     "footer";
 }
 
+#mpps-icon, #lema-icon{
+    display: none;
+}
+
+#menu-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.menu-btn-burger{
+    width: 40px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn-burger::before{
+    transform: translateY(-16px);
+}
+
+.menu-btn-burger::after{
+    transform: translateY(16px);
+}
+
+.menu-btn-burger.open{
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.open.menu-btn-burger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.open.menu-btn-burger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
 @media screen and (min-width: 900px){
     .grid-container{
         grid-template-columns: 300px auto 300px;
-        grid-template-rows: 100px calc(100vh - 200px) 100px 100px;
+        grid-template-rows: 70px calc(100vh - 170px) 100px 100px;
         grid-template-areas:
         "header header header"
         "geolocation main system"
         "geolocation contact system"
         "footer footer footer";
+    }
+
+    #mpps-icon, #lema-icon{
+        display: block;
+    }
+
+    #menu-btn-container{
+        display: none;
     }
 }

@@ -27,4 +27,4 @@ let load = () => {
 
 };
 
-//window.addEventListener('load', load, false);
+window.addEventListener('load', load, false);
