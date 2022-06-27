@@ -6,6 +6,8 @@ let load = () => {
         element.classList.toggle('open');
     }, false);
 
+    /*
+
     const swiper = new Swiper('.swiper', {
         autoplay: {
             delay: 3000,
@@ -20,8 +22,9 @@ let load = () => {
             prevEl: '.swiper-button-prev',
         }
     });
-      
+    
+    */
 
 };
 
-window.addEventListener('load', load, false);
+//window.addEventListener('load', load, false);
