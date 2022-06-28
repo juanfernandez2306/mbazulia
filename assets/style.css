@@ -2,6 +2,7 @@
     --color-firts: #ff0000;
     --color-second: #fff;
     --color-third: #51557E;
+    --color-fourth: #F0EBE3;
 }
 
 *{
@@ -12,7 +13,7 @@ body{
     height: 100%;
     width: 100%;
     max-width: 1200px;
-    background-color: #eee;
+    background-color: #cecece;
     margin: 0 auto;
 }
 
@@ -43,15 +44,18 @@ header figure{
     margin: 0;
 }
 
-.geolocation{
-    grid-area: geolocation;
-    background-color: var(--color-second);
+.geolocation, .system{
     display: flex;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
     justify-content: center;
     padding: 2rem 1rem;
+}
+
+.geolocation{
+    grid-area: geolocation;
+    background-color: var(--color-second);
 }
 
 main{
@@ -61,17 +65,28 @@ main{
 
 .system{
     grid-area: system;
-    background-color: green;
+    background-color: var(--color-fourth);
 }
 
 .contact{
     grid-area: contact;
-    background-color: chartreuse;
+    background-color: var(--color-fourth);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
     grid-area: footer;
-    background-color: grey;
+    background-color: var(--color-third);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
 }
 
 .grid-container{
@@ -181,6 +196,125 @@ footer{
     border: 2px solid #fff;
 }
 
+.data-search, .server-database{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 90%;
+}
+
+.data-search figure{
+    margin: 0;
+}
+
+.data-search svg{
+    width: 3rem;
+    height: 3rem;
+}
+
+.data-search .title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem
+}
+
+.data-search input, .data-search select{
+    width: 90%;
+    border-radius: .5rem;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+.data-search input[type="submit"]{
+    background-color: var(--color-third);
+    color: var(--color-second);
+}
+
+.server-database svg{
+    width: 5rem;
+    height: 5rem;
+}
+
+.server-database h1{
+    text-align: center;
+}
+
+.server-database a{
+    width: 90%;
+    display: flex;
+    height: 2rem;
+    background-color: var(--color-third);
+    color: var(--color-second);
+    text-decoration: none;
+    border-radius: .5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-twitter svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+.logo-twitter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-twitter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.link-twitter a{
+    text-decoration: none;
+    text-align: center;
+    color: var(--color-third);
+    font-weight: bold;
+}
+
+.contact svg use{
+    fill: var(--color-third);
+}
+
+.contact h1{
+    color: var(--color-third);
+}
+
+footer em{
+    color: var(--color-second);
+}
+
+.direction{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.direction em{
+    color: var(--color-second);
+}
+
+.direction svg{
+    width: 4rem;
+    height: 4rem;
+}
+
+.direction svg use{
+    fill: var(--color-second)
+}
+
 @media screen and (min-width: 480px) and (max-width: 900px){
 
     .img-mpps-container{
@@ -196,7 +330,7 @@ footer{
 @media screen and (min-width: 901px){
     .grid-container{
         grid-template-columns: 300px auto 300px;
-        grid-template-rows: 70px calc(100vh - 170px) 100px 100px;
+        grid-template-rows: 70px calc(100vh - 170px) 100px 70px;
         grid-template-areas:
         "header header header"
         "geolocation main system"
@@ -208,6 +342,10 @@ footer{
         padding: .5rem;
     }
 
+    .system, .contact{
+        background-color: var(--color-second);
+    }
+
     #mpps-icon, #lema-icon{
         display: block;
     }
@@ -215,5 +353,14 @@ footer{
     #menu-btn-container,
     .img-mpps-container{
         display: none;
+    }
+
+    footer{
+        gap: .5rem;
+    }
+
+    .direction svg{
+        width: 2rem;
+        height: 2rem;
     }
 }
