@@ -350,6 +350,20 @@ main .swiper{
     background: var(--color-second);
 }
 
+.swiper-slide{
+    position: relative;
+}
+
+.swiper-slide p{
+    position: absolute;
+    bottom: 10%;
+    background-color: rgba(0, 0, 0, .5);
+    color: var(--color-second);
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
 @media screen and (min-width: 480px) and (max-width: 900px){
 
     .img-mpps-container{
