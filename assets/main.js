@@ -5,9 +5,7 @@ let load = () => {
         let element = e.target;
         element.classList.toggle('open');
     }, false);
-
-    /*
-
+    
     const swiper = new Swiper('.swiper', {
         autoplay: {
             delay: 3000,
@@ -23,8 +21,6 @@ let load = () => {
         }
     });
     
-    */
-
 };
 
 window.addEventListener('load', load, false);

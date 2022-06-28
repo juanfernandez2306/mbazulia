@@ -60,7 +60,9 @@ header figure{
 
 main{
     grid-area: main;
-    background-color: gold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .system{
@@ -91,7 +93,7 @@ footer{
 
 .grid-container{
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-rows: 50px 70px calc(100vh - 120px) repeat(2, auto) repeat(2, 200px);
     grid-template-areas:
     "img-mpps-container"
@@ -315,6 +317,39 @@ footer em{
     fill: var(--color-second)
 }
 
+main .swiper{
+    width: 100%;
+    height: 100%;
+}
+
+#img1{
+    background-image: url("img/slider/img1.jpg");
+}
+
+#img2{
+    background-image: url("img/slider/img2.jpg");
+}
+
+#img3{
+    background-image: url("img/slider/img3.jpg");
+}
+
+#img1, #img2, #img3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next{
+    color: var(--color-second);
+}
+
+.swiper .swiper-pagination-bullet-active{
+    background: var(--color-second);
+}
+
 @media screen and (min-width: 480px) and (max-width: 900px){
 
     .img-mpps-container{
@@ -340,6 +375,11 @@ footer em{
 
     .geolocation{
         padding: .5rem;
+    }
+
+    main{
+        min-width: 100%;
+        max-width: 600px;
     }
 
     .system, .contact{
